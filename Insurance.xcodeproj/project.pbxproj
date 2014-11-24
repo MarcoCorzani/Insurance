@@ -1,0 +1,437 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9FF110B1A23BDA8007ED013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF110A1A23BDA8007ED013 /* AppDelegate.swift */; };
+		A9FF110E1A23BDA8007ED013 /* Insurance.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A9FF110C1A23BDA8007ED013 /* Insurance.xcdatamodeld */; };
+		A9FF11101A23BDA8007ED013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF110F1A23BDA8007ED013 /* ViewController.swift */; };
+		A9FF11131A23BDA9007ED013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9FF11111A23BDA9007ED013 /* Main.storyboard */; };
+		A9FF11151A23BDA9007ED013 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9FF11141A23BDA9007ED013 /* Images.xcassets */; };
+		A9FF11181A23BDA9007ED013 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9FF11161A23BDA9007ED013 /* LaunchScreen.xib */; };
+		A9FF11241A23BDA9007ED013 /* InsuranceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9FF11231A23BDA9007ED013 /* InsuranceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A9FF111E1A23BDA9007ED013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A9FF10FD1A23BDA8007ED013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A9FF11041A23BDA8007ED013;
+			remoteInfo = Insurance;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A9FF11051A23BDA8007ED013 /* Insurance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Insurance.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9FF11091A23BDA8007ED013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9FF110A1A23BDA8007ED013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A9FF110D1A23BDA8007ED013 /* Insurance.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Insurance.xcdatamodel; sourceTree = "<group>"; };
+		A9FF110F1A23BDA8007ED013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A9FF11121A23BDA9007ED013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A9FF11141A23BDA9007ED013 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A9FF11171A23BDA9007ED013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		A9FF111D1A23BDA9007ED013 /* InsuranceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InsuranceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9FF11221A23BDA9007ED013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9FF11231A23BDA9007ED013 /* InsuranceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsuranceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9FF11021A23BDA8007ED013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9FF111A1A23BDA9007ED013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9FF10FC1A23BDA8007ED013 = {
+			isa = PBXGroup;
+			children = (
+				A9FF11071A23BDA8007ED013 /* Insurance */,
+				A9FF11201A23BDA9007ED013 /* InsuranceTests */,
+				A9FF11061A23BDA8007ED013 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9FF11061A23BDA8007ED013 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF11051A23BDA8007ED013 /* Insurance.app */,
+				A9FF111D1A23BDA9007ED013 /* InsuranceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9FF11071A23BDA8007ED013 /* Insurance */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF110A1A23BDA8007ED013 /* AppDelegate.swift */,
+				A9FF110F1A23BDA8007ED013 /* ViewController.swift */,
+				A9FF11111A23BDA9007ED013 /* Main.storyboard */,
+				A9FF11141A23BDA9007ED013 /* Images.xcassets */,
+				A9FF11161A23BDA9007ED013 /* LaunchScreen.xib */,
+				A9FF110C1A23BDA8007ED013 /* Insurance.xcdatamodeld */,
+				A9FF11081A23BDA8007ED013 /* Supporting Files */,
+			);
+			path = Insurance;
+			sourceTree = "<group>";
+		};
+		A9FF11081A23BDA8007ED013 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF11091A23BDA8007ED013 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9FF11201A23BDA9007ED013 /* InsuranceTests */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF11231A23BDA9007ED013 /* InsuranceTests.swift */,
+				A9FF11211A23BDA9007ED013 /* Supporting Files */,
+			);
+			path = InsuranceTests;
+			sourceTree = "<group>";
+		};
+		A9FF11211A23BDA9007ED013 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9FF11221A23BDA9007ED013 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9FF11041A23BDA8007ED013 /* Insurance */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9FF11271A23BDA9007ED013 /* Build configuration list for PBXNativeTarget "Insurance" */;
+			buildPhases = (
+				A9FF11011A23BDA8007ED013 /* Sources */,
+				A9FF11021A23BDA8007ED013 /* Frameworks */,
+				A9FF11031A23BDA8007ED013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Insurance;
+			productName = Insurance;
+			productReference = A9FF11051A23BDA8007ED013 /* Insurance.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A9FF111C1A23BDA9007ED013 /* InsuranceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9FF112A1A23BDA9007ED013 /* Build configuration list for PBXNativeTarget "InsuranceTests" */;
+			buildPhases = (
+				A9FF11191A23BDA9007ED013 /* Sources */,
+				A9FF111A1A23BDA9007ED013 /* Frameworks */,
+				A9FF111B1A23BDA9007ED013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A9FF111F1A23BDA9007ED013 /* PBXTargetDependency */,
+			);
+			name = InsuranceTests;
+			productName = InsuranceTests;
+			productReference = A9FF111D1A23BDA9007ED013 /* InsuranceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9FF10FD1A23BDA8007ED013 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Alphaweb;
+				TargetAttributes = {
+					A9FF11041A23BDA8007ED013 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					A9FF111C1A23BDA9007ED013 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = A9FF11041A23BDA8007ED013;
+					};
+				};
+			};
+			buildConfigurationList = A9FF11001A23BDA8007ED013 /* Build configuration list for PBXProject "Insurance" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A9FF10FC1A23BDA8007ED013;
+			productRefGroup = A9FF11061A23BDA8007ED013 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9FF11041A23BDA8007ED013 /* Insurance */,
+				A9FF111C1A23BDA9007ED013 /* InsuranceTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9FF11031A23BDA8007ED013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9FF11131A23BDA9007ED013 /* Main.storyboard in Resources */,
+				A9FF11181A23BDA9007ED013 /* LaunchScreen.xib in Resources */,
+				A9FF11151A23BDA9007ED013 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9FF111B1A23BDA9007ED013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9FF11011A23BDA8007ED013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9FF11101A23BDA8007ED013 /* ViewController.swift in Sources */,
+				A9FF110E1A23BDA8007ED013 /* Insurance.xcdatamodeld in Sources */,
+				A9FF110B1A23BDA8007ED013 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A9FF11191A23BDA9007ED013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9FF11241A23BDA9007ED013 /* InsuranceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A9FF111F1A23BDA9007ED013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A9FF11041A23BDA8007ED013 /* Insurance */;
+			targetProxy = A9FF111E1A23BDA9007ED013 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A9FF11111A23BDA9007ED013 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9FF11121A23BDA9007ED013 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A9FF11161A23BDA9007ED013 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9FF11171A23BDA9007ED013 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9FF11251A23BDA9007ED013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A9FF11261A23BDA9007ED013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9FF11281A23BDA9007ED013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Insurance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A9FF11291A23BDA9007ED013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Insurance/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A9FF112B1A23BDA9007ED013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InsuranceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Insurance.app/Insurance";
+			};
+			name = Debug;
+		};
+		A9FF112C1A23BDA9007ED013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = InsuranceTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Insurance.app/Insurance";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9FF11001A23BDA8007ED013 /* Build configuration list for PBXProject "Insurance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9FF11251A23BDA9007ED013 /* Debug */,
+				A9FF11261A23BDA9007ED013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9FF11271A23BDA9007ED013 /* Build configuration list for PBXNativeTarget "Insurance" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9FF11281A23BDA9007ED013 /* Debug */,
+				A9FF11291A23BDA9007ED013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A9FF112A1A23BDA9007ED013 /* Build configuration list for PBXNativeTarget "InsuranceTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9FF112B1A23BDA9007ED013 /* Debug */,
+				A9FF112C1A23BDA9007ED013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A9FF110C1A23BDA8007ED013 /* Insurance.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A9FF110D1A23BDA8007ED013 /* Insurance.xcdatamodel */,
+			);
+			currentVersion = A9FF110D1A23BDA8007ED013 /* Insurance.xcdatamodel */;
+			path = Insurance.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A9FF10FD1A23BDA8007ED013 /* Project object */;
+}
