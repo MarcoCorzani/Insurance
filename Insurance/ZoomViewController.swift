@@ -8,122 +8,128 @@
 
 import UIKit
 
-class ZoomViewController: UIViewController, UIScrollViewDelegate {  //UIScrollViewDelegate muss drin sein!!
 
+
+//let imageScrollSmallImageName = "wallabi_small.jpg"
+//let imageScrollLargeImageName = image!
+
+class ZoomViewController: UIViewController, UIScrollViewDelegate {
     
     
     
-    var image: UIImage? = nil
     
+    var bild: UIImage? = nil
+    
+    
+    @IBAction func zurueckButton(sender: UIButton) {
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIImageView!
+    
+    
+    @IBOutlet weak var imageConstraintTop: NSLayoutConstraint!
+   
+    @IBOutlet weak var imageConstraintRight: NSLayoutConstraint!
+    
+    @IBOutlet weak var imageConstraintLeft: NSLayoutConstraint!
+    
+    @IBOutlet weak var imageConstraintBottom: NSLayoutConstraint!
+    
+    
+    
+   var lastZoomScale: CGFloat = -1
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+        
+        imageView.image = bild! 
+        scrollView.delegate = self
+        updateZoom()
+    }
+    
+    // Update zoom scale and constraints
+    // It will also animate because willAnimateRotationToInterfaceOrientation
+    // is called from within an animation block
+    //
+    // DEPRECATION NOTICE: This method is said to be deprecated in iOS 8.0. But it still works.
+    override func willAnimateRotationToInterfaceOrientation(
+        toInterfaceOrientation: UIInterfaceOrientation, duration: NSTimeInterval) {
+            
+            super.willAnimateRotationToInterfaceOrientation(toInterfaceOrientation, duration: duration)
+            updateZoom()
    
     
-    //@IBOutlet weak var imageView: UIImageView!
-    var imageView: UIImageView!
+    }
     
-   
+    func updateConstraints() {
+        if let image = imageView.image {
+            
+            let imageWidth = image.size.width
+            let imageHeight = image.size.height
+            
+            let viewWidth = view.bounds.size.width
+            let viewHeight = view.bounds.size.height
+            
+            // center image if it is smaller than screen
+            var hPadding = (viewWidth - scrollView.zoomScale * imageWidth) / 2
+            if hPadding < 0 { hPadding = 0 }
+            
+            var vPadding = (viewHeight - scrollView.zoomScale * imageHeight) / 2
+            if vPadding < 0 { vPadding = 0 }
+            
+            imageConstraintLeft.constant = hPadding
+            imageConstraintRight.constant = hPadding
+            
+            imageConstraintTop.constant = vPadding 
+            imageConstraintBottom.constant = vPadding
+            
+            // Makes zoom out animation smooth and starting from the right point not from (0, 0)
+            view.layoutIfNeeded()
+        }
+    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // Zoom to show as much image as possible unless image is smaller than screen
+    private func updateZoom() {
+        if let bild = imageView.image {
+            var minZoom = min(view.bounds.size.width / bild.size.width,
+                view.bounds.size.height / bild.size.height)
+            
+            if minZoom > 1 { minZoom = 1 }
+            
+            scrollView.minimumZoomScale = minZoom
+            
+            // Force scrollViewDidZoom fire if zoom did not change
+            if minZoom == lastZoomScale { minZoom += 0.000001 }
+            
+            scrollView.zoomScale = minZoom
+            lastZoomScale = minZoom
+        }
+    }
     
-//        self.scrollView.minimumZoomScale = 1
-//        self.scrollView.maximumZoomScale = 50
-//        self.scrollView.delegate = self
-//        self.imageView.image = self.image!
-
-        
-        
-        imageView = UIImageView(image: image)
-        imageView.frame = CGRect(origin: CGPoint(x: 0, y: 0), size:image!.size)
-        scrollView.addSubview(imageView)
-        
-        // 2
-        scrollView.contentSize = image!.size 
-        
-        println(imageView.frame)
-    
-//    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
-//        return self.imageView
+//    @IBAction func onImageSizeToggleButtonTapped(sender: AnyObject) {
+//        imageSizeToggleButton.selected = !imageSizeToggleButton.selected
+//        imageSizeToggleButton.invalidateIntrinsicContentSize()
+//        
+//        let fileName = imageSizeToggleButton.selected ?
+//            imageScrollSmallImageName : imageScrollLargeImageName
+//        
+//        imageView.image = UIImage(named: fileName)
+//        updateZoom()
 //    }
-        
-        
-        
-        // 3
-        var doubleTapRecognizer = UITapGestureRecognizer(target: self, action: "scrollViewDoubleTapped:")
-        doubleTapRecognizer.numberOfTapsRequired = 2
-        doubleTapRecognizer.numberOfTouchesRequired = 1
-        scrollView.addGestureRecognizer(doubleTapRecognizer)
-        
-        // 4
-        let scrollViewFrame = scrollView.frame
-        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
-        let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
-        let minScale = min(scaleWidth, scaleHeight);
-        scrollView.minimumZoomScale = minScale;
-        
-        // 5
-        scrollView.maximumZoomScale = 1.0
-        scrollView.zoomScale = minScale;
-        
-        // 6
-        centerScrollViewContents()
-
-    }
-
-    func centerScrollViewContents() {
-        let boundsSize = scrollView.bounds.size
-        var contentsFrame = imageView.frame
-        
-        if contentsFrame.size.width < boundsSize.width {
-            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2
-        } else {
-            contentsFrame.origin.x = 0.0
-        }
-        
-        if contentsFrame.size.height < boundsSize.height {
-            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2
-        } else {
-            contentsFrame.origin.y = 0.0
-        }
-        
-        imageView.frame = contentsFrame
-        
-        println(contentsFrame)
+//    
+    // UIScrollViewDelegate
+    // -----------------------
     
+    func scrollViewDidZoom(scrollView: UIScrollView) {
+        updateConstraints()
     }
     
-    
-    func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer) {
-        // 1
-        let pointInView = recognizer.locationInView(imageView)
-        
-        // 2
-        var newZoomScale = scrollView.zoomScale * 1.5
-        newZoomScale = min(newZoomScale, scrollView.maximumZoomScale)
-        
-        // 3
-        let scrollViewSize = scrollView.bounds.size
-        let w = scrollViewSize.width / newZoomScale
-        let h = scrollViewSize.height / newZoomScale
-        let x = pointInView.x - (w / 2.0)
-        let y = pointInView.y - (h / 2.0)
-        
-        let rectToZoomTo = CGRectMake(x, y, w, h);
-        
-        // 4
-        scrollView.zoomToRect(rectToZoomTo, animated: true)
-    }
-    
-    
-    func viewForZoomingInScrollView(scrollView: UIScrollView!) -> UIView! {
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
         return imageView
     }
-    
-    func scrollViewDidZoom(scrollView: UIScrollView!) {
-        centerScrollViewContents()
-    }
-
+   
 }

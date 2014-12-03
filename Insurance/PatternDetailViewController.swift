@@ -13,15 +13,25 @@ class PatternDetailViewController: UIViewController {
     var pattern : Pattern? = nil
     var tappedImage : UIImage? = nil
     
+    
     @IBOutlet weak var frontImageView: UIImageView!
     @IBOutlet weak var backImageView: UIImageView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     
-    self.navigationItem.title = self.pattern!.name
+        var myColor = UIColor.whiteColor()
+        self.backImageView.layer.borderWidth = 5
+        self.backImageView.layer.borderColor = myColor.CGColor
+        self.frontImageView.layer.borderWidth = 5
+        self.frontImageView.layer.borderColor = myColor.CGColor
+        
+        
+        self.navigationItem.title = self.pattern!.name
         self.frontImageView.image = UIImage(data:self.pattern!.frontImage)
         self.backImageView.image = UIImage(data:self.pattern!.backImage)
     
@@ -44,6 +54,6 @@ class PatternDetailViewController: UIViewController {
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         var zoomViewController = segue.destinationViewController as ZoomViewController
-        zoomViewController.image = self.tappedImage!
+        zoomViewController.bild = self.tappedImage!
     }
     }
